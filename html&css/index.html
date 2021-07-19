@@ -14,7 +14,7 @@
     </head>
     
     <body>
-        <nav class = "navbar navbar-inverse">
+        <!-- <nav class = "navbar navbar-inverse">
             <div class = "container-fluid">
                 <div class = "navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -26,12 +26,12 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class = "nav navbar-nav">
                         <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="gamePage.html">Snake Game</a></li>
+                        <li><a href="gamePage.php">Snake Game</a></li>
                         <li><a href="scores.html">Top Scores</a></li>
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> -->
         <div class = "container">
             <div class = "row">
                 <div class = "col-xs-12">
@@ -45,14 +45,15 @@
                     </p>
                 </div>
                 <div class = "col-sm-6 centered">
-                    <h4><i>High Scores from SQL Table</i></h4>
+                    <h4><i>5 High Scores from SQL Table</i></h4>
+                    <a href = "scores.html"><button class="btn btn-default"><b>Top ___ Scores</b> <span class = "glyphicon glyphicon-arrow-right"></span></button></a>
                 </div>
             </div>
             <div class = "row centered">
                 <div class = "col-sm-4"></div>
                 <div class = "col-sm-4">
                     <h4>Enter a username</h4>
-                    <form action="#" method = "post"> <!-- Change # to a .php file to send information to that file -->
+                    <form action="gamePage.php" method = "post">
                         <div class="form-group">
                           <input type="text" class="form-control" placeholder="Username" name = "uname" required>
                         </div>

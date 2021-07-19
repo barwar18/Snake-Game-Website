@@ -1,3 +1,11 @@
+<?php
+    $user = $_POST["uname"];
+    if(!isset($user))
+    {
+        header("Location: index.html"); // Forces users back to homepage if they haven't entered a username
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,7 +23,7 @@
     </head>
     
     <body>
-        <nav class = "navbar navbar-inverse">
+        <!-- <nav class = "navbar navbar-inverse">
             <div class = "container-fluid">
                 <div class = "navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
@@ -32,11 +40,11 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> -->
         <div class = "container">
             <div class = "row centered">
                 <div class = "col-xs-12">
-                <h4><i>Entered Username</i></h4> <!-- Retrieve from php file -->
+                <h4><?php echo $user ?></h4> <!-- Retrieve from php file -->
             </div>
             <div class = "row centered">
                 <div class = "col-xs-12">
