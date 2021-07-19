@@ -44,7 +44,7 @@
         <div class = "container">
             <div class = "row centered">
                 <div class = "col-xs-12">
-                <h4><?php echo $user ?></h4> <!-- Retrieve from php file -->
+                <h2><?php echo $user ?></h2> <!-- Retrieve from php file -->
             </div>
             <div class = "row centered">
                 <div class = "col-xs-12">
@@ -236,8 +236,8 @@
             </div>
             <div class = "row centered">
                 <div class = "col-xs-12">
-                    <a href = "index.html"><button class="btn btn-default"><span class = "glyphicon glyphicon-arrow-left"></span> <b>Back to Home</b></button></a>
-                    <a href = "scores.html"><button class="btn btn-default"><b>Top ___ Scores</b> <span class = "glyphicon glyphicon-arrow-right"></span></button></a>
+                    <a href = "index.html"><button class="btn btn-info"><span class = "glyphicon glyphicon-arrow-left"></span> <b>Back to Home</b></button></a>
+                    <a href = "scores.html"><button class="btn btn-info"><b>Top ___ Scores</b> <span class = "glyphicon glyphicon-arrow-right"></span></button></a>
                 </div>
             </div>
         </div>

@@ -35,32 +35,87 @@
         <div class = "container">
             <div class = "row">
                 <div class = "col-xs-12">
-                    <h1>The Snake Game</h1>
+                    <div class = "jumbotron">
+                        <h1>The Snake Game</h1>
+                    </div>
                 </div>
             </div>
             <div class = "row">
                 <div class = col-sm-6>
-                    <p>The objective of The Snake Game is to collect the apples (small red dots) by adjusting the direction of the snake. As you eat more apples, the snake will get longer. You can't run into
-                        another part of the snake or the game border or the game will end. To control the snake press the arrow keys on your keyboard.
+                    <p class = "overview">The objective of The Snake Game is to collect the apples (small red dots) by adjusting the direction of the snake. As you eat more apples, the snake will get longer. You can't run into
+                        another part of the snake or the game border or the game will end.
                     </p>
                 </div>
                 <div class = "col-sm-6 centered">
                     <h4><i>5 High Scores from SQL Table</i></h4>
-                    <a href = "scores.html"><button class="btn btn-default"><b>Top ___ Scores</b> <span class = "glyphicon glyphicon-arrow-right"></span></button></a>
+                    <a href = "scores.html"><button class="btn btn-info"><b>Top ___ Scores</b> <span class = "glyphicon glyphicon-arrow-right"></span></button></a>
                 </div>
             </div>
-            <div class = "row centered">
+            <div  id = "playGame" class = "row centered">
                 <div class = "col-sm-4"></div>
-                <div class = "col-sm-4">
-                    <h4>Enter a username</h4>
-                    <form action="gamePage.php" method = "post">
+                <div class = "col-sm-4 login">
+                    <h4>Enter a Username</h4>
+                    <form action = "gamePage.php" method = "post">
                         <div class="form-group">
                           <input type="text" class="form-control" placeholder="Username" name = "uname" required>
                         </div>
-                        <button type="submit" class="btn btn-default">Play Game</button>
+                        <button type="submit" class="btn btn-primary">Play Game</button>
                     </form>
                 </div>
                 <div class = "col-sm-4"></div>
+            </div>
+            <hr>
+            <div class = "row centered">
+                <div class = "col-xs-12">
+                    <h1>Directions</h1>
+                </div>
+            </div>
+            <span class = "directions overview">
+                <div class = "row">
+                    <div class = "col-xs-8">
+                        <p>This is the game window. You control the light-blue chain of boxes, called the snake.</p>
+                    </div>
+                    <div class = "col-xs-4">
+                        <img src = "images/loadIn.png" alt = "Game window after loading in" />
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class = "col-xs-8">
+                        <p>Use the arrow keys to change the snake's direction to run into the red dots, called apples.</p>
+                    </div>
+                    <div class = "col-xs-4">
+                        <img src = "images/collectApples.png" alt = "Snake about to collect an apple" />
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class = "col-xs-8">
+                        <p>As you collect apples your score will increase. Your score is displayed above the playing area.</p>
+                    </div>
+                    <div class = "col-xs-4">
+                        <img src = "images/score.png" alt = "Playing window with score visible" />
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class = "col-xs-8">
+                        <p>Hitting the edge of the playing area will end the game.</p>
+                    </div>
+                    <div class = "col-xs-4">
+                        <img src = "images/hittingWall.png" alt = "Snake hitting a wall" />
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class = "col-xs-8">
+                        <p>Running into your tail will also end the game.</p>
+                    </div>
+                    <div class = "col-xs-4">
+                        <img src = "images/hittingTail.png" alt = "Snake running into its tail" />
+                    </div>
+                </div>
+            </span>
+            <div class = "row centered bottom">
+                <div class = "col-xs-12">
+                    <a href = "#playGame"><button class = "btn btn-primary">Play Game</button></a>
+                </div>
             </div>
         </div>
     </body>

@@ -1,7 +1,3 @@
-.col-xs-12 img {
-    width: 50%;
-}
-
 .centered {
     text-align: center;
 }
@@ -18,4 +14,40 @@ button {
 canvas {
     width: 45%;
     height: width;
+}
+
+.overview {
+    font-size: 18px;
+}
+
+.login {
+    background-color: rgb(163, 163, 163);
+    padding: 1.5%;
+    margin: 2%;
+    border-radius: 15px;
+}
+
+body {
+    background-color: lightgray;
+}
+
+img {
+    border: solid 2px black;
+    width: 95%;
+}
+
+.directions p {
+    text-align: right;
+}
+
+.directions .row {
+    margin: 1%;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom {
+    margin-bottom: 5%;
 }
