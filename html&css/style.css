@@ -8,4 +8,14 @@
 
 button {
     margin: 1%;
+    min-width: 25%;
+}
+
+#score {
+    font-size: 48px;
+}
+
+canvas {
+    width: 45%;
+    height: width;
 }
