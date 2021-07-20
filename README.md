@@ -7,3 +7,4 @@ The SQL server also sends back the high score information to the index.html page
 HTML and CSS are used to create the non-game portion of the website.
 JS is used to operate the game and keep track of points.
 PHP calls SQL commands to access the SQL server for score entries and to display score information on the site.
+Team Members: Warwick Barker, Daniel Blatner, Deming Tracy
