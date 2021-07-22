@@ -51,3 +51,19 @@ img {
 .bottom {
     margin-bottom: 5%;
 }
+
+#startButton, #restartButton {
+    border-radius: 12px;
+}
+
+#startButton {
+    background-color: lightGreen;   
+}
+
+.right {
+    text-align: right;
+}
+
+.left { 
+    text-align: left;
+}
