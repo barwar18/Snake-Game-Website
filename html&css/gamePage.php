@@ -1,5 +1,6 @@
 <?php
     $user = $_POST["uname"];
+    session_start();
     if(!isset($user))
     {
         header("Location: index.html"); // Forces users back to homepage if they haven't entered a username
@@ -23,10 +24,14 @@
     </head>
     
     <body>
+      <?php
+      $_SESSION["user"] = $user;
+      ?>
         <div class = "container">
             <div class = "row centered">
                 <div class = "col-xs-12">
-                <h2><?php echo $user ?></h2> <!-- Retrieve from php file -->
+                <h2><?php  echo $user ?>
+                </h2> <!-- Retrieve from php file -->
               </div>
             </div>
             <div class = "row centered">
