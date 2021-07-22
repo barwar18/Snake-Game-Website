@@ -18,14 +18,14 @@
 	    exit();
 	  }
 
-	if ($result = $conn -> query("SELECT * FROM leaderboard")) {
+	if ($result = $conn -> query("SELECT * FROM leaderboard ORDER BY score DESC")) {
 		// $result -> free_result();
 		// $result = $conn->query($sql);
 
 			if ($result > 0) {
 			  // output data of each row
 			  while($row = $result->fetch_assoc()) {
-			    echo "User:". $row['user']. "Score:". $row['score']. "<br>";
+			    echo "User: ". $row['user']. " Score: ". $row['score']. "<br>";
 			  }
 			} else {
 			  echo "0 results";
