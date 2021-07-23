@@ -60,7 +60,7 @@
 				</div>
 				<div class = "row centered">
 					<div class = "col-xs-12">
-						<a href = "index.html"><button class="btn btn-info"><span class = "glyphicon glyphicon-arrow-left"></span> <b>Back to Home</b></button></a>
+						<a href = "index.php"><button class="btn btn-info"><span class = "glyphicon glyphicon-arrow-left"></span> <b>Back to Home</b></button></a>
 					</div>
 				</div>
 			</div>

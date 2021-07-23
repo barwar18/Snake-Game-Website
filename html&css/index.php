@@ -29,8 +29,47 @@
                     </p>
                 </div>
                 <div class = "col-sm-6 centered">
-                    <h4><i>5 High Scores from SQL Table</i></h4>
-                    <a href = "leaderboard.php"><button class="btn btn-info"><b>Top Scores</b> <span class = "glyphicon glyphicon-arrow-right"></span></button></a>
+                <table>
+							<tr>
+								<th class = "rank">Place</th>
+								<th>Username</th>
+								<th>Score</th>
+							</tr>
+							<?php
+				
+								DEFINE('DB_USERNAME', 'root');
+								DEFINE('DB_PASSWORD', 'root');
+								DEFINE('DB_HOST', 'localhost:3306');
+								DEFINE('DB_DATABASE', 'leaderboarddb');
+								
+								$rank = 1;
+								$conn = new mysqli(DB_HOST, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
+
+								if ($conn -> connect_errno) {
+									echo "Failed to connect: " . $conn->connect_error;
+									exit();
+								}
+
+								if ($result = $conn -> query("SELECT * FROM leaderboard ORDER BY score DESC")) {
+									// $result -> free_result();
+									// $result = $conn->query($sql);
+
+										if ($result > 0) {
+										// output data of each row
+										while(($row = $result->fetch_assoc()) && $rank <= 5) {
+											echo "<tr><td class = \"rank\">". $rank. "</td><td class = \"uname\">". $row['user']. "</td><td class = \" score right\">". $row['score']. "</td></tr>";
+											$rank++;
+										}
+										} else {
+										echo "0 results";
+										}
+										
+									}
+
+								$conn->close();
+							?>
+						</table>
+                    <a href = "leaderboard.php"><button class="btn btn-info"><b>Scores</b> <span class = "glyphicon glyphicon-arrow-right"></span></button></a>
                 </div>
             </div>
             <div  id = "playGame" class = "row centered">
