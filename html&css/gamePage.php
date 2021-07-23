@@ -3,7 +3,7 @@
     session_start();
     if(!isset($user))
     {
-        header("Location: index.html"); // Forces users back to homepage if they haven't entered a username
+        header("Location: index.php"); // Forces users back to homepage if they haven't entered a username
     }
 ?>
 
