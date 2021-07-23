@@ -67,3 +67,26 @@ img {
 .left { 
     text-align: left;
 }
+
+table {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 18px;
+}
+
+th {
+    text-align: center;
+}
+
+.rank {
+    width: 10%;
+}
+
+.uname {
+    width: 60%;
+}
+
+.score {
+    width: 30%;
+}

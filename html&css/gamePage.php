@@ -7,6 +7,7 @@
     }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -28,7 +29,7 @@
       $_SESSION["user"] = $user;
       ?>
 
-      <form action="recordscore.php" id="inputform" method="post">
+      <form id="inputform" method="post">
        <label for="score"></label>
        <input type="text" id="scoreinput" name="score" readonly hidden><br><br>
        <input type="submit" value="Submit Score" hidden>
@@ -106,6 +107,7 @@
 
                           if(has_game_ended())
                           {
+                            submitscore();
                             return;
                           }
 
@@ -268,6 +270,23 @@
                         snakeboard_ctx.strokeRect(food_x,food_y,10,10);
                       }
 
+                      function submitscore() {
+                        // Set input in the HTML form to the score variable
+                        document.getElementById("scoreinput").value = score;
+                        // Submit the form 
+                        SubmitFormData();
+                        //document.getElementById("inputform").submit();
+                      }
+
+                      function SubmitFormData() {
+                        var score = $("#scoreinput").val();
+                        
+                        $.post("recordscore.php", { score: score },
+                        function(data) {
+                          $('#inputform')[0].reset();
+                        });
+}
+
 
                     </script> </p>
                 </div>
@@ -275,7 +294,7 @@
             <div class = "row centered">
                 <div class = "col-xs-12">
                     <a href = "index.html"><button class="btn btn-info"><span class = "glyphicon glyphicon-arrow-left"></span> <b>Back to Home</b></button></a>
-                    <a href = "scores.html"><button class="btn btn-info"><b>Top ___ Scores</b> <span class = "glyphicon glyphicon-arrow-right"></span></button></a>
+                    <a href = "leaderboard.php"><button class="btn btn-info"><b>Top Scores</b> <span class = "glyphicon glyphicon-arrow-right"></span></button></a>
                 </div>
             </div>
         </div>
